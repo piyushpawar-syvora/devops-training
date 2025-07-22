@@ -30,8 +30,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/todo-list-project.git
-   cd todo-list-project
+   git clone https://github.com/Syvora-Training/devops-training-assignment.git
+   cd devops-training-assignment
    ```
 
 2. **Install dependencies:**
