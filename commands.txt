@@ -1,0 +1,33 @@
+docker run -it ubuntu bash
+apt-get update && apt-get upgrade -y
+apt-get install -y curl git
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash
+nvm install 18
+npm install -g pm2
+git clone https://github.com/Syvora-Training/devops-training-assignment-1.git
+cd devops-training-assignment-1
+npm install
+apt-get install -y postgresql
+service postgresql start
+su - postgres
+psql
+CREATE USER postgres WITH PASSWORD 'password';
+CREATE DATABASE permalist;
+exit
+exit
+cat > .env <<EOF
+DB_HOST=localhost
+DB_USER=postgres
+DB_PASSWORD=password
+DB_DATABASE=permalist
+DB_PORT=5432
+EOF
+pm2 start index.js
+pm2 logs index
+curl localhost:3000
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null &&null &&
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list &&
+apt-get update && apt-get install ngrok -y
+ngrok config add-authtoken 31awOuj4sPAh28x7hfGLZr5IPW8_4iYMHLdzHHqv8vCLXa5Bq
+ngrok http 3000
