@@ -2,7 +2,7 @@ name: docker worklfow
 on:
   push:
     branches: 
-      assignment/k8s-deployment-1
+      assignment-1-dockerfile
 jobs:
   build:
     runs-on: ubuntu-latest
