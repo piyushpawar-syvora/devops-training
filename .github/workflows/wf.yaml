@@ -1,4 +1,4 @@
-name: k8s worklfow
+name: docker worklfow
 on:
   push:
     branches: 
