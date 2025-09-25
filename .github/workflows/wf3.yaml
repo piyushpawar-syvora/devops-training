@@ -1,0 +1,16 @@
+name: practice 2
+on: 
+  push:
+    branches:
+      - assignment-1-dockerfile
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['16', '18', '20']
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
