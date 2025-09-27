@@ -1,0 +1,22 @@
+[TAILING] Tailing last 15 lines for [index] process (change the value with --lines option)
+/root/.pm2/logs/index-error.log last 15 lines:
+0|index    |     at Socket.emit (node:events:517:28)
+0|index    |     at addChunk (node:internal/streams/readable:368:12)
+0|index    |     at readableAddChunk (node:internal/streams/readable:341:9)
+0|index    |     at Readable.push (node:internal/streams/readable:278:10)
+0|index    | ❌ Failed to start app: Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string
+0|index    |     at Object.continueSession (/devops-training-assignment-1/node_modules/pg/lib/crypto/sasl.js:24:11)
+0|index    |     at Client._handleAuthSASLContinue (/devops-training-assignment-1/node_modules/pg/lib/client.js:272:18)
+0|index    |     at Connection.emit (node:events:517:28)
+0|index    |     at /devops-training-assignment-1/node_modules/pg/lib/connection.js:117:12
+0|index    |     at Parser.parse (/devops-training-assignment-1/node_modules/pg-protocol/dist/parser.js:40:17)
+0|index    |     at Socket.<anonymous> (/devops-training-assignment-1/node_modules/pg-protocol/dist/index.js:11:42)
+0|index    |     at Socket.emit (node:events:517:28)
+0|index    |     at addChunk (node:internal/streams/readable:368:12)
+0|index    |     at readableAddChunk (node:internal/streams/readable:341:9)
+0|index    |     at Readable.push (node:internal/streams/readable:278:10)
+
+/root/.pm2/logs/index-out.log last 15 lines:
+0|index    | ✅ Connected to PostgreSQL
+0|index    | ✅ Ensured 'items' table exists
+0|index    | 🚀 Server running on http://localhost:3000
